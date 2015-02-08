@@ -1,13 +1,114 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 
-
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+.common{
+font-family: "Raleway", sans-serif;
+color: $grey;
+line-height: 1.1;
+font-weight:lighter;
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+.main-navbar{
+  width:$fullwidth;
+  height: 14%;
+  .introName{
+      @extend .common;
+    
+      padding-left:10px;
+      font-size: 1.2em;
+      letter-spacing: 13px;
+        
+    
+    
+      text-transform: uppercase;
+      
+      
+      padding-top:7px;
+    }
+  
+  .sub-navbar{
+      
+    
+      padding-top:20px;
+      text-align: center;
+      
+      a{
+        @extend .common;
+        
+        font-size: 0.9em;
+        letter-spacing: 8px;
+        
+        
+        padding:20px;
+      }
+    padding-bottom:19px;
+  }
+  
+  
+  background-color: black;
+  opacity: 0.8;
+}
+
+
+
+#contents{
+    video{
+      width:$fullwidth;
+    }
+    #me{
+      min-height: 530px;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      
+          #photo{
+            padding-bottom:30px;
+            width:30%;
+            content:url(/img/me.jpg);  
+            float: left;
+          }
+          #mecontent{
+            padding-top:10px;
+
+            #aboutme {
+              @extend .common;
+              padding-left: 10px;
+              font-size: 1.3em;
+              letter-spacing: 13px;
+              
+              text-transform: uppercase;
+
+              padding-top: 7px;
+            }
+            opacity:0.6;
+            background: rgba(0,0,0,1); 
+            color: #fff;
+            padding: 1.5rem;
+            width: 65%;
+            float: right;
+            font-size: 1.2rem;
+
+            p{
+              @extend .common;
+
+              letter-spacing: 1.5px;
+              opacity: 0.8;
+              padding-left:2em;
+
+
+              margin-top: 1.5rem;
+
+              font-size: 0.8rem;
+            }
+          }
+    }
+  
+  
+}
+
+
+
+body {
+  background-color: lighten($white, 10);
+  
 }
