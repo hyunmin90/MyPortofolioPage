@@ -9,6 +9,7 @@ font-weight:lighter;
 }
 
 .main-navbar{
+  -webkit-transition: all 0.3s
   width:$fullwidth;
   height: 14%;
   .introName{
@@ -47,6 +48,10 @@ font-weight:lighter;
   
   background-color: black;
   opacity: 0.8;
+  
+  &:hover {
+    width: 50px;
+  }
 }
 
 
