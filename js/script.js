@@ -14,18 +14,20 @@ Portofolio.UI = {
       var curr_position=$(window).scrollTop();
 
       if(curr_position > offset){
-        $('.main-navbar').css({'position':'fixed','top':0,height:'7%'});
+	//$('.main-navbar').addClass('resize');
+        $('.main-navbar').css({'position':'fixed','top':0,width:'0%'});
       }
 
       else{
-        $('.main-navbar').css({'position':'relative'});
+	//$('.main-navbar').removeClass('resize');
+        $('.main-navbar').css({'position':'relative', width:'100%'});
       }
     
       
   },
   clickedScroll: function(id){
     
-      
+     alert(id); 
       $('html, body').animate({
           scrollTop: $("#"+id).offset().top
       }, 2000); 
@@ -49,7 +51,7 @@ $(document).ready(function () {
     
     var clicked_id=event.target.id;
     
-    clicked_id=clicked_id.replace('button','');
+    clicked_id=clicked_id.replace('button',' ');
     clicked_id.trim();
     
     Portofolio.UI.clickedScroll(clicked_id);
