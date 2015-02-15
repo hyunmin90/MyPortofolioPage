@@ -16,11 +16,13 @@ Portofolio.UI = {
       if(curr_position > offset){
 	//$('.main-navbar').addClass('resize');
         $('.main-navbar').css({'position':'fixed','top':0,width:'0%'});
+        $('a').css({'padding':'0px','padding-left': '10px', 'padding-top': '2px'});
       }
 
       else{
 	//$('.main-navbar').removeClass('resize');
         $('.main-navbar').css({'position':'relative', width:'100%'});
+        $('a').css({'padding':'20px'});
       }
     
       
@@ -47,7 +49,7 @@ $(document).ready(function () {
     Portofolio.UI.scrolled();
   });
   
-  $("a").click(function(event) {
+  $(".menu").click(function(event) {
     
     var clicked_id=event.target.id;
     
@@ -57,7 +59,13 @@ $(document).ready(function () {
     Portofolio.UI.clickedScroll(clicked_id);
   
   });
-  
+  $("button").click(function(event) {
+    var factor = $('#past').scrollLeft();
+    if(factor==3500){ $('#past').animate({"scrollLeft":"0"});}
+    else{$('#past').animate({"scrollLeft":"+=516"});}
+  });
+
+
 });
 
 

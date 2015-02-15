@@ -16,12 +16,12 @@ font-weight:lighter;
 
 .resize{
 position:fixed;  
-width:200px;
 height:10px;  
 
 }
 
 .main-navbar{
+  z-index:10;
   width:100%;
   height: 14%;
   .introName{
@@ -119,7 +119,22 @@ height:10px;
             }
           }
     }
+  #past{
+    button{
+      z-index:3;
+      position:absolute;
+    }
+    overflow:hidden;
+    width:1500px;
+    height:333px;
+    #slide-holder{
+      width:5000px;
+      height:333px;
+    }
   
+  
+  }
+
   
 }
 
