@@ -47,14 +47,13 @@ height:10px;
       
       a{
         @extend .common;
-        
+        display:inline-block;
         font-size: 0.9em;
         letter-spacing: 8px;
         
-        
+        padding-top:10px;
         padding:20px;
       }
-    padding-bottom:19px;
   }
   
   
@@ -86,7 +85,7 @@ height:10px;
           }
           #mecontent{
             background-color:rgba(158, 155, 155, 0.8);
-            padding-top:10px;
+            margin-top:10%;
 
             #aboutme {
               @extend .common;
@@ -133,7 +132,7 @@ height:10px;
     width:1500px;
     height:333px;
     #slide-holder{
-      width:5000px;
+      width:5500px;
       height:333px;
     }
   
