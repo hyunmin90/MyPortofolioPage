@@ -21,7 +21,7 @@ Portofolio.UI = {
 
       else{
 	//$('.main-navbar').removeClass('resize');
-        $('.main-navbar').css({'position':'relative', width:'100%'});
+        $('.main-navbar').css({'position':'relative', width:'100%',height: '13%'});
         $('a').css({'padding':'20px'});
       }
     
@@ -29,7 +29,7 @@ Portofolio.UI = {
   },
   clickedScroll: function(id){
     
-     alert(id); 
+    
       $('html, body').animate({
           scrollTop: $("#"+id).offset().top
       }, 2000); 
@@ -45,9 +45,14 @@ Portofolio.UI = {
 
 $(document).ready(function () {
   Portofolio.UI.init();
+  
+  
+  
+  
   $(window).scroll(function(){
     Portofolio.UI.scrolled();
   });
+  
   
   $(".menu").click(function(event) {
     
@@ -59,7 +64,7 @@ $(document).ready(function () {
     Portofolio.UI.clickedScroll(clicked_id);
   
   });
-  $("button").click(function(event) {
+  $("#next").click(function(event) {
     var factor = $('#past').scrollLeft();
     if(factor==3500){ $('#past').animate({"scrollLeft":"0"});}
     else{$('#past').animate({"scrollLeft":"+=516"});}
@@ -67,6 +72,8 @@ $(document).ready(function () {
 
 
 });
+
+
 
 
 
