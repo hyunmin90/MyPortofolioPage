@@ -1,6 +1,10 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 .common{
 font-family: "Raleway", sans-serif;
 color: $white;
@@ -13,6 +17,7 @@ a{
   color: black;; 
 }
 .exbackground{
+  
   margin-left: 8rem;
   margin-top: 40px;
   background-color:white;
@@ -57,6 +62,9 @@ height:10px;
   z-index:10;
   width:100%;
   height: 15%;
+  .highlight{
+    background-color:rgba(0,0,0,0.6);
+  }
   .introName{
       @extend .common;
     
@@ -81,11 +89,11 @@ height:10px;
       a{
         @extend .common;
         display:inline-block;
-        font-size: 0.9em;
+        font-size: 1.3em;
         letter-spacing: 8px;
         
-        padding-top:10px;
-        padding:20px;
+        margin:20px;
+        margin-top:10px;
       }
   }
   
@@ -158,11 +166,10 @@ height:10px;
       letter-spacing:1rem;
       color:white;
       padding-left:50%;
+      position:absolute;
       background-position-x:50%;
       //background-image: url("/img/arrow.png");
       z-index:3;
-      position:absolute;
-      width: 100%;
       background-repeat: no-repeat;
       background-size: 50px 50px;
       height: 512px;
@@ -171,6 +178,7 @@ height:10px;
     width:100%;
     height:333px;
     #slide-holder{
+      box-sizing : border-box;
       margin-top: 60px;
       width:5500px;
       height:333px;
@@ -201,6 +209,7 @@ height:10px;
       }
     }
     .modalDialog {
+      display:none;
       position: fixed;
       top: 0;
       right: 0;
