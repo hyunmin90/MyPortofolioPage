@@ -16,14 +16,14 @@ Portofolio.UI = {
       if(curr_position > offset){
 	//$('.main-navbar').addClass('resize');
         //$('.main-navbar').css({'position':'fixed','top':0,width:'0%'}); Unable when I am done with MP
-        $('.main-navbar').css({'position':'fixed','top':0,width:'100%',height:'10%','padding-top':'0px'});
+        $('.main-navbar').css({'position':'fixed','top':0,width:'100%',height:'10%','padding-top':'0px','font-size':'0.6em'});
         //$('a').css({'padding':'0px','padding-left': '10px', 'padding-top': '20px'}); This also
       }
 
       else{
         
 	//$('.main-navbar').removeClass('resize');
-        $('.main-navbar').css({'position':'fixed','top':0,width:'100%',height:'15%'});
+        $('.main-navbar').css({'position':'fixed','top':0,width:'100%',height:'15%','font-size':'0.9em'});
         //$('a').css({'padding':'20px'});
       }
     

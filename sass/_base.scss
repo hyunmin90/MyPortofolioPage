@@ -7,6 +7,11 @@ color: $white;
 line-height: 1.1;
 font-weight:lighter;
 }
+
+a{
+  text-decoration: none; 
+  color: black;; 
+}
 .exbackground{
   margin-left: 8rem;
   margin-top: 40px;
@@ -20,6 +25,20 @@ font-weight:lighter;
   margin-right:30px;
   z-index:3;
   background-size: 200px 150px;
+
+  i{
+    display:none;
+  }
+  &:hover i{
+    z-index:-1;
+    margin-left: 38%;
+    margin-top: 23%;
+    display:block;
+    width: 100%;
+    opacity: 0.5;
+    height: 100%;
+  }
+
 }
 
 .transition{
@@ -172,12 +191,12 @@ height:10px;
   #experience{
     margin-top: 50px;
     width:100%;
-    height:300px;
-    
+    height: 35rem;
     .experience{
       a{
-        width:100%;
-        height:100%;
+        z-index: 500;
+        width: 100%;
+        height: 100%;
         display: block;
       }
     }
@@ -213,7 +232,7 @@ height:10px;
         position: relative;
         margin: 10% auto;
         padding: 5px 20px 13px 20px;
-        background:rgba(102, 102, 102, 0.55);
+        background:rgba(82, 82, 82, 0.96);
       }
     }
 
@@ -278,6 +297,25 @@ height:10px;
   
   
   }
+  
+  #contact{
+    .cicon{
+      margin-left: 0.5rem;
+      margin-top: 1rem;
+    }
+    position: fixed;
+    top: 0px;
+    width: 10%;
+    margin-left: 96%;
+    background-color: rgba(255, 255, 255, 0.49);
+    height: 29%;
+    margin-top: 27%;
+    float:right;
+    z-index:100;
+  
+  
+  }
+  
 
   
 }
@@ -291,56 +329,3 @@ body {
 
 
 
-
-
-
-.modalDialog {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #00d9ff;
-}
