@@ -7,6 +7,20 @@ color: $white;
 line-height: 1.1;
 font-weight:lighter;
 }
+.exbackground{
+  margin-left: 8rem;
+  margin-top: 40px;
+  background-color:white;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  float:left;
+  background-repeat: no-repeat;
+  width:270px;
+  height:200px;
+  margin-right:30px;
+  z-index:3;
+  background-size: 200px 150px;
+}
 
 .transition{
   -webkit-transition: all 2s;
@@ -23,7 +37,7 @@ height:10px;
 .main-navbar{
   z-index:10;
   width:100%;
-  height: 13%;
+  height: 15%;
   .introName{
       @extend .common;
     
@@ -42,7 +56,7 @@ height:10px;
   .sub-navbar{
       
     
-      padding-top:20px;
+      padding-top:8px;
       text-align: center;
       
       a{
@@ -57,7 +71,7 @@ height:10px;
   }
   
   
-  background-color: black;
+  background-color: grey;
   opacity: 0.8;
   
   
@@ -119,19 +133,26 @@ height:10px;
           }
     }
   #past{
+    height:550px;
     #next{
-      background-image: url("/img/arrow.png");
+      font-size:3rem;
+      letter-spacing:1rem;
+      color:white;
+      padding-left:50%;
+      background-position-x:50%;
+      //background-image: url("/img/arrow.png");
       z-index:3;
       position:absolute;
-      width: 512px;
+      width: 100%;
       background-repeat: no-repeat;
       background-size: 50px 50px;
       height: 512px;
     }
     overflow:hidden;
-    width:1500px;
+    width:100%;
     height:333px;
     #slide-holder{
+      margin-top: 60px;
       width:5500px;
       height:333px;
     }
@@ -149,47 +170,108 @@ height:10px;
   }
   
   #experience{
-    margin-left: 200px;
     margin-top: 50px;
-    background-color:black;
+    width:100%;
+    height:300px;
+    
+    .experience{
+      a{
+        width:100%;
+        height:100%;
+        display: block;
+      }
+    }
+    .modalDialog {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      opacity: 0;
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+      pointer-events: none;
+      &:target {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      > div {
+        h3{
+          padding-top: 22px;
+          font-size:3rem;
+          padding-bottom: 19px;
+        }
+        p{
+          line-height: 1.6rem;
+        }
+        @extend .common;
+        height: 20rem;
+        width: 25rem;
+        letter-spacing: 0.2rem;
+        position: relative;
+        margin: 10% auto;
+        padding: 5px 20px 13px 20px;
+        background:rgba(102, 102, 102, 0.55);
+      }
+    }
+
+    .close {
+      background: #606061;
+      color: #FFFFFF;
+      line-height: 25px;
+      position: absolute;
+      right: -12px;
+      text-align: center;
+      top: -10px;
+      width: 24px;
+      text-decoration: none;
+      font-weight: bold;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      border-radius: 12px;
+      -moz-box-shadow: 1px 1px 3px #000;
+      -webkit-box-shadow: 1px 1px 3px #000;
+      box-shadow: 1px 1px 3px #000;
+      &:hover {
+        background: grey;
+      }
+    }
+    
+    
+    
+    #experienceTit{
+      letter-spacing:1rem;
+      font-size:3rem;
+      padding-left:40%;
+      color:white;
+    
+    
+    }
+    
     
     #experience1{
-      float:left;
-      background-repeat: no-repeat;
-      width:200px;
-      height:200px;
+      @extend .exbackground;
       background-image: url("/img/daumkakao.png");
-      z-index:3;
-      background-size: 150px 150px;
-      
+     
+  
     }
     #experience2{
-      float:left;
-      background-repeat: no-repeat;
-      width:200px;
-      height:200px;
-      background-image: url("/img/daumkakao.png");
-      z-index:3;
-      background-size: 150px 150px;
+      @extend .exbackground;
+      background-image: url("/img/sonylogo.jpg");
+      
       
     }
     #experience3{
-      float:left;
-      background-repeat: no-repeat;
-      width:200px;
-      height:200px;
-      background-image: url("/img/daumkakao.png");
-      z-index:3;
-      background-size: 150px 150px;
+      @extend .exbackground;
+      background-image: url("/img/seal.jpg");
+      
     }
     #experience4{
-      float:left;
-      background-repeat: no-repeat;
-      width:200px;
-      height:200px;
-      background-image: url("/img/daumkakao.png");
-      z-index:3;
-      background-size: 150px 150px;
+      @extend .exbackground;
+      background-image: url("/img/rokaf.png");
+      
     }
   
   
@@ -205,4 +287,60 @@ height:10px;
 body {
   background-color: black;
   
+}
+
+
+
+
+
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
 }
