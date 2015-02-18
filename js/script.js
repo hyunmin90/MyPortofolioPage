@@ -23,7 +23,7 @@ Portofolio.UI = {
       else{
         
 	//$('.main-navbar').removeClass('resize');
-        $('.main-navbar').css({'position':'fixed','top':0,width:'100%',height:'15%','font-size':'1.3em'});
+        $('.main-navbar').css({'position':'fixed','top':0,width:'100%',height:'15%','font-size':'0.9em'});
         //$('a').css({'padding':'20px'});
       }
     

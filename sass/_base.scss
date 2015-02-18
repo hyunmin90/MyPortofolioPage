@@ -89,7 +89,7 @@ height:10px;
       a{
         @extend .common;
         display:inline-block;
-        font-size: 1.3em;
+        font-size: 0.9em;
         letter-spacing: 8px;
         
         margin:20px;
@@ -125,7 +125,7 @@ height:10px;
             float: left;
           }
           #mecontent{
-            background-color:rgba(158, 155, 155, 0.8);
+            background-color:rgba(189, 189, 189, 0.51);
             margin-top:10%;
 
             #aboutme {
@@ -133,12 +133,11 @@ height:10px;
               padding-left: 10px;
               font-size: 1.3em;
               letter-spacing: 13px;
-              
+              color:white;
               text-transform: uppercase;
 
               padding-top: 7px;
             }
-            opacity:0.6;
             color: #fff;
             padding: 1.5rem;
             width: 65%;
@@ -162,7 +161,7 @@ height:10px;
   #past{
     height:550px;
     #next{
-      font-size:3rem;
+      font-size:1rem;
       letter-spacing:1rem;
       color:white;
       padding-left:50%;
@@ -215,7 +214,7 @@ height:10px;
       right: 0;
       bottom: 0;
       left: 0;
-      z-index: 1000;
+      z-index: 9999;
       opacity: 0;
       -webkit-transition: opacity 400ms ease-in;
       -moz-transition: opacity 400ms ease-in;
@@ -256,12 +255,6 @@ height:10px;
       width: 24px;
       text-decoration: none;
       font-weight: bold;
-      -webkit-border-radius: 12px;
-      -moz-border-radius: 12px;
-      border-radius: 12px;
-      -moz-box-shadow: 1px 1px 3px #000;
-      -webkit-box-shadow: 1px 1px 3px #000;
-      box-shadow: 1px 1px 3px #000;
       &:hover {
         background: grey;
       }
@@ -271,7 +264,7 @@ height:10px;
     
     #experienceTit{
       letter-spacing:1rem;
-      font-size:3rem;
+      font-size:1rem;
       padding-left:40%;
       color:white;
     
@@ -325,6 +318,29 @@ height:10px;
   
   }
   
+  #qoutes{
+    @extend .common;
+    h1{
+      font-size: 1.2em;
+      letter-spacing: 13px;
+      margin-bottom:1rem;
+    }
+    p{
+      letter-spacing: 0.1rem;
+    }
+    #first{padding-bottom: 2rem;}
+    margin-left: 14%;
+    padding-top: 5%;
+    width: 80%;
+    height: 100%;
+    -webkit-column-count: 3;
+    -moz-column-count: 3; 
+    column-count: 3;
+  }
+  #blank{
+    height:30rem;
+  
+  }
 
   
 }
