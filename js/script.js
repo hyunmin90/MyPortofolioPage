@@ -56,6 +56,12 @@ Portofolio.UI = {
           scrollTop: $("#"+id).offset().top
       }, 2000); 
     
+  },
+  
+  centeringVert: function(){
+    $('#mecontent').css({'margin-top' : $(this).height()/2});
+    
+
   }
   
 
@@ -91,6 +97,16 @@ $(document).ready(function () {
     if(factor==3612){ $('#past').animate({"scrollLeft":"0"});}
     else{$('#past').animate({"scrollLeft":"+=516"});}
   });
+  $("#previous").click(function(event) {
+    var factor = $('#past').scrollLeft();
+    if(factor!=0){ 
+      
+      $('#past').animate({"scrollLeft":"-=516"});
+    
+    }
+
+  });
+  
   
   $('.experience').click(function(event){
       $('.modalDialog').css({'display':'block'});
